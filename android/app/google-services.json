@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "70416891040",
+    "project_id": "findoc-financial",
+    "storage_bucket": "findoc-financial.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70416891040:android:28533c81c4fa8a2f20ddc5",
+        "android_client_info": {
+          "package_name": "com.example.assignments"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "70416891040-h17d16kmftkb1rv6rt8co6rmn7da0gno.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.assignments",
+            "certificate_hash": "875511aa98d709fff010d648adafccd2a236183c"
+          }
+        },
+        {
+          "client_id": "70416891040-c5m43idh10k3bbumbm4ilaed2m1k5mbj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApm8iIH66Vz1nvybUbdVuwNTOrqCF3zP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "70416891040-c5m43idh10k3bbumbm4ilaed2m1k5mbj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

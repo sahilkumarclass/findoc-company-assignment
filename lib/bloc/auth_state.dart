@@ -1,53 +1,55 @@
 import 'package:equatable/equatable.dart';
 
-class LoginState extends Equatable {
+enum AuthStatus { initial, loading, success, failure }
+
+class AuthState extends Equatable {
   final String email;
   final String password;
   final bool isEmailValid;
   final bool isPasswordValid;
-  final bool isSubmitting;
-  final bool isSuccess;
-  final bool isFailure;
+  final AuthStatus status;
+  final bool isLoginMode;
+  final String? errorMessage;
 
-  const LoginState({
+  const AuthState({
     required this.email,
     required this.password,
     required this.isEmailValid,
     required this.isPasswordValid,
-    required this.isSubmitting,
-    required this.isSuccess,
-    required this.isFailure,
+    required this.status,
+    required this.isLoginMode,
+    this.errorMessage,
   });
 
-  factory LoginState.initial() {
-    return const LoginState(
+  factory AuthState.initial() {
+    return const AuthState(
       email: '',
       password: '',
       isEmailValid: true,
       isPasswordValid: true,
-      isSubmitting: false,
-      isSuccess: false,
-      isFailure: false,
+      status: AuthStatus.initial,
+      isLoginMode: true,
+      errorMessage: null,
     );
   }
 
-  LoginState copyWith({
+  AuthState copyWith({
     String? email,
     String? password,
     bool? isEmailValid,
     bool? isPasswordValid,
-    bool? isSubmitting,
-    bool? isSuccess,
-    bool? isFailure,
+    AuthStatus? status,
+    bool? isLoginMode,
+    String? errorMessage,
   }) {
-    return LoginState(
+    return AuthState(
       email: email ?? this.email,
       password: password ?? this.password,
       isEmailValid: isEmailValid ?? this.isEmailValid,
       isPasswordValid: isPasswordValid ?? this.isPasswordValid,
-      isSubmitting: isSubmitting ?? this.isSubmitting,
-      isSuccess: isSuccess ?? this.isSuccess,
-      isFailure: isFailure ?? this.isFailure,
+      status: status ?? this.status,
+      isLoginMode: isLoginMode ?? this.isLoginMode,
+      errorMessage: errorMessage ?? this.errorMessage,
     );
   }
 
@@ -57,8 +59,8 @@ class LoginState extends Equatable {
     password,
     isEmailValid,
     isPasswordValid,
-    isSubmitting,
-    isSuccess,
-    isFailure,
+    status,
+    isLoginMode,
+    errorMessage
   ];
 }
